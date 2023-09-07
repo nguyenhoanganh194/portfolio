@@ -22,10 +22,10 @@
 				</header>
 				<nav id="nav">
 					<ul>
-						<li><a href="#one" class="active">About</a></li>
-						<li><a href="#two">In Spirit Bomb Studio</a></li>
-						<li><a href="#three">In YT Studio</a></li>
-						<li><a href="#four">Contact</a></li>
+						<li><a href="index.html#one">About</a></li>
+						<li><a href="index.html#two">In Spirit Bomb Studio</a></li>
+						<li><a href="index.html#three">In YT Studio</a></li>
+						<li><a href="index.html#four">Contact</a></li>
 					</ul>
 				</nav>
 				<footer>
@@ -52,154 +52,139 @@
 								</div>
 								<div class="container">
 									<header class="major">
-										<h2>About me</h2>
-										<p>
-                                            Hello, my name is <strong>ANH NGUYEN HOANG</strong><br>A master student at the University of Oulu<br/>		
-                                        </p>
-								
+										<h2>Spirit Bomb Studio</h2>
 									</header>
-                                    <p> I'm deeply passionate about game development. 
-                                        It's more than just a career for me; it's a genuine love for creating interactive experiences. 
-                                        Every day, I wake up excited to code, design, and problem-solve in the world of gaming. 
-                                        This passion drives me to continuously learn, innovate,
-                                        and deliver engaging gaming experiences that players can enjoy. 
-                                        I believe that this enthusiasm is what keeps me dedicated and motivated in this dynamic field.
+										<h5>SkyChamp &amp; Atlantis Invaders</h5>
+										<p> SkyChamp and Atlantis Invaders stand as the studio's flagship projects, boasting significant achievements. 
+											These games have cultivated a robust presence on Facebook, amassing over 5,000 loyal followers and inspiring numerous fan pages 
+											created by passionate players. 
+											Furthermore, they have earned recognition as a top-tier game studio, 
+											thanks to multiple features from Google and acknowledgment by TechInAsia.com. 
+											In 2020, our games proudly maintained a user base exceeding 10 million and received a multitude of prestigious awards.
+											</p>
+
+										<h5>SkyChamp</h5>
+										<p>	<span class="image left"><img src="images/pic (0).png" alt="" /></span>
+											<span class="right">
+											My story with SkyChamp began when I came to Spirit Bomb Studio. I began my journey in Spirit Bomb by participating the team behind it. My responsibility was to take required features from 
+											game designer and implement it. This required me to understand the code base of games and study the new coding style of the company. 
+											<div class="col-4 col-12-xsmall">
+												<h5>Here are the list of features that I did during the first period:</h5>
+												<ol>
+													<li>Gacha pets.</li>
+													<li>Reroll pets skills.</li>
+													<li>Item fusion.</li>
+													<li>AFK Farm.</li>
+													<li>Fixing bugs (of course).</li>
+													<li>UI implementation and fix UI layout</li>
+												</ol>
+											</div>
+										
+											<div class="col-4 col-12-xsmall">
+												<h5>After that, I was given the task to implement more technique stuffs such as:</h5>
+												<ol>
+													<li>Optimize first loading time remove not-used-yet assets and then load them later</li>
+														<p>The Unity splash screen takes approximately 2 seconds, followed by our loading screen for 3 seconds, 
+															which was deemed excessive for a mobile game.
+															My objective was to streamline the entire system's loading time. 
+															Consequently, I opted to minimize the initial loading task, 
+															retaining only essential components and relegating low-priority items to subsequent loading stages. 
+															This approach proved successful, reducing our loading time to just 1 second, all while maintaining a 
+															seamless user experience.
+														</p>
+													<li>Optimize frame rate by change new bullets to use particle system (ultilize particle system multi-thread)</li>
+													<p>In the game, bullets often move independently, and to optimize this, we can offload this task to another thread for updates. 
+														Unity's particle system is an ideal solution for this scenario. It allows us to track particle positions and provides APIs 
+														to control their lifespan and destroy particles as needed.<br>
+
+														The strategy involves creating a list in C# to store instances of a "fake bullet" class, 
+														and then performing 2D casting at regular intervals. This approach significantly enhances game performance,
+														 especially since the game features a substantial number of bullets being fired by the characters.<br>
+														<h5>The problems:</h5>
+														 <ol>
+															<li>Can not use for special bullet (chasing, follow bezier path,...)</li>
+															<li>Less flexibility: Can not freely control bullet sprite or speed. We have to follow the particle system restrictions</li>
+															<li>Today, we can have Unity job system that may work better for this case.</li>
+														</ol>
+													</p>
+													<li>Campain script system</li>
+													<p>The editor and gameplay implementation so that game designer can easily create a campain map where monster have to move 
+														in the particular shape or control ship of the user and move it to somewhere after playing a dialog.</p>
+													<li>There are more but I forgot them.</li>
+												</ol>
+											</div>
+											
+
+												
+										</p>
+										<p><span class="image right"><img src="images/pic (5).png" alt="" /></span>
+											When my boss approached me and shared the exciting news that I would be a key member of the development team for the 
+											revolutionary next iterations of "SkyChamp", I couldn't contain my joy. 
+											It was a moment of immense pride and responsibility, knowing that my team and I had the opportunity 
+											to shape the future of that beloved game.
+											However, there was also a tinge of apprehension. "SkyChamp" had already garnered fame 
+											and a dedicated fan base. We were well aware that introducing new features and changes carried a certain level of risk.
+											We didn't want to disrupt the essence of what made these games great in the first place.
+											But with "Atlantis Invader," we found a unique opportunity. 
+											This game became the canvas where we could freely unleash our creativity and implement all the exciting ideas 
+											we had envisioned for the original "SkyChamp." It was a space to experiment, innovate, and enhance the gaming experience
+											while preserving the integrity of the established "Atlantis Invader" universe.<br>
+											<br>
+											<p>
+											Initially, we embarked on a thorough exploration of the game's theme. 
+											Questions like, "What narrative are we aiming to convey?" and "What drives players to embark on this virtual adventure?"
+											occupied our discussions for an extensive period, spanning perhaps an entire week. 
+											Ultimately, our brainstorming efforts crystallized into a compelling storyline set in a post-apocalyptic world.
+											Here, the treasures of the old world lay submerged in the depths of the ocean, zealously guarded by ancient AI-controlled ships. 
+											In this narrative, the player assumes the role of a destitute mercenary, 
+											leading a motley crew on a quest to amass wealth by delving into the lost treasures of Atlantis 
+											and uncovering the mysteries that shroud our world's history.
+											</p>
+											<p>
+											During the development phase, we leveraged the existing engine from SkyChamp. 
+											I dedicated my efforts to refining and refactoring the codebase, which we then employed for Atlantis Invaders. 
+											My tasks included optimizing the code, reworking the monster path controller system, 
+											addressing lingering bugs, and, ultimately, restructuring large classes to establish a comprehensive code hierarchy. 
+											With these improvements in place, we were well-prepared to create a distinct iteration of Atlantis Invaders, 
+											setting it apart from SkyChamp.
+											</p>
+											<p>
+											I brought the game designer's vision to life by introducing new ships, bullets, and innovative mechanics for both motherships 
+											and smaller vessels. Additionally, I implemented a drone system and devised fresh leveling-up mechanisms. 
+											These enhancements transformed the game into a truly fantastic and visually stunning experience.
+											
+											
+											Indeed, it was a wonderful game. I fondly recall the stubborn ship AI, always eager to guide players on how to play, 
+											and the smug shopkeeper character who never failed to remind players that buying from him was the only logical choice. 
+											</p>
+										</p>
+								
                                     </p>
+									<p>In August 2022, I departed from Spirit Bomb to pursue a Master's degree in Finland. 
+                                        My colleagues and boss bid me farewell, expressing their best wishes. 
+										This is the end of my journey with SkyChamp and especially Atlantis Invaders, thank you for all the memory that you gave me. 
+										I hope to see you rise in the Google Play ranking again.
+									</p>
+									
                                 </div>
 							</section>
 
-						<!-- Two -->
-							<section id="two">
-								<div class="container">
-									<h3>Few Accomplishments in Spirit Bomb Studio</h3>
-									<p>This is the place where my journey began—a haven for people fueled by a shared enthusiasm for game development. 
-                                        Here, we dined together, toiled side by side, and dared to dream of crafting the greatest game Vietnam has ever seen. 
-                                        together, we created numerous games that still fill me with pride to this day. 
-                                    </p>
-                                    <div class="features">
-										<article>
-											<a  class="image"><img src="images/pic (0).png" alt="" /></a>
-											<div class="inner">
-												<h4>SkyChamp</h4>
-                                                <p>"SkyChamp" is more than just a game; it's a portal to a world that embodies the dreams of the dedicated team behind its creation. 
-                                                    This passionate group of developers, artists, and visionaries invested their hearts and souls into the crafting of this masterpiece. 
-                                                    With painstaking attention, they meticulously designed every aspect, 
-                                                    from the enchanting landscapes to the intricately detailed pets, 
-                                                    ensuring that each moment within the game is a visual and emotional delight. And I am proud to say that I am one of them.
-                                                    The game has millions of download and still a famous franchise in 2023...
-                                                    <br><a href = "spiritbomb.html" >Learn more.</a>
-                                                </p>
-											</div>
-										</article>
-										<article>
-											<a  class="image"><img src="images/pic (5).png" alt="" /></a>
-											<div class="inner">
-												<h4>Atlantis Invaders</h4>
-                                                <p>When my boss approached me and shared the exciting news that 
-                                                    I would be a key member of the development team for the revolutionary
-                                                     next iterations of "SkyChamp",
-                                                     I couldn't contain my joy. It was a moment of immense pride and responsibility, 
-                                                     knowing that my team and I had the opportunity to shape the future of these beloved games...
-                                                     <br><a href = "spiritbomb.html" >Learn more.</a>
-                                                </p></div>
-										</article>
-										<article>
-											<a class="image"><img src="images/pic (8).png" alt="" /></a>
-											<div class="inner">
-												<h4>Hypercasual</h4>
-												<p>During our development journey for both "SkyChamp" and "Atlantis Invader," there were moments when we felt the need to 
-                                                    take a break from the complexity and depth of mid-core games. 
-                                                    It was during these breaks that we ventured into the world of Hypercasual games...
-                                                    <br><a href = "spiritbomb.html" >Learn more.</a>
-                                                </p>
-											</div>
-										</article>
+							
+							<section>
+								<span class="image fit"><img src="images/save.png" alt="" /></span>
+								<div class="box alt">
+									<div class="row gtr-50 gtr-uniform">
+										<div class="col-4"><span class="image fit"><img src="images/IMG_0113.JPEG" alt="" /></span></div>
+										<div class="col-4"><span class="image fit"><img src="images/Dinner-1024x683.jpg" alt="" /></span></div>
+										<div class="col-4"><span class="image fit"><img src="images/11-1024x683.jpg" alt="" /></span></div>
+										<div class="col-4"><span class="image fit"><img src="images/gui.png" alt="" /></span></div>
+										<div class="col-4"><span class="image fit"><img src="images/gun 1.png" alt="" /></span></div>
+										<div class="col-4"><span class="image fit"><img src="images/gun2.png" alt="" /></span></div>
+										<div class="col-4"><span class="image fit"><img src="images/skychamp.png" alt="" /></span></div>
 									</div>
-                                    <p>In August 2022, I departed from Spirit Bomb to pursue a Master's degree in Finland. 
-                                        My colleagues and boss bid me farewell, expressing their best wishes. 
-                                        "Remember, there will always be a place for you here if you decide to return.", my boss said.
-                                        It was a sentiment that touched my heart and reminded me of the strong bonds 
-                                        and sense of belonging that had been cultivated during my time at Spirit Bomb.
-									
-                                    </p>
 								</div>
 							</section>
-
-						<!-- Three -->
-							<section id="three">
-								<div class="container">
-									<h3>Few Accomplishments in YT Studio</h3>
-									<p>In 2022, a group of students from the University of Natural Science and Bach Khoa University joined forces to establish 
-                                        a small game development studio. When they approached me to lead their team, I was intrigued by their enthusiasm and potential.
-
-                                        As a team, we embarked on our journey, starting off with modest beginnings. 
-                                        The initial stages were challenging, and progress was slow. However, with my guidance, training, 
-                                        and mentorship, we gradually gained momentum.
-                                        
-                                        Over time, the team evolved and matured. What began as a modest endeavor has now transformed into a 
-                                        capable studio capable of creating complex games. I have full confidence that this team will continue to 
-                                        thrive and grow in the ever-evolving world of game development. 
-                                    </p>
-                                    <div class="features">
-										<article>
-											<a class="image"><img src="images/ticking.png" alt="" /></a>
-											<div class="inner">
-												<h4>It is ticking</h4>
-                                                <p>
-                                                    The newly released game in Steam. The game is about interacting with components to defuse the bomb. 
-                                                    It also features a workshop so that user can freely create their own bomb and upload it so that everyone can play. 
-                                                    Developing this game was a formidable challenge. 
-                                                    The intricate game mechanics demanded meticulous handling of race conditions, time complexity,....
-                                                    <br><a href = "generic.html" >Learn more.</a>
-                                                </p>
-											</div>
-										</article>
-										<article>
-											<a  class="image"><img src="images/Barrier.png" alt="" /></a>
-											<div class="inner">
-												<h4>The last barrier</h4>
-                                                <p>This game is a work in progress, and our goal is to craft a truly immersive zombie-themed experience 
-                                                    that runs seamlessly on mobile devices. The foundation of the game engines has been laid,
-                                                    and we are now in the process of refining the game by addressing bugs, fine-tuning the gameplay balance, 
-                                                    and creating stunning artwork. 
-                                                    Developing this game has proven to be an even greater challenge compared to our previous project, "It is ticking." 
-                                                    The complexity of this game arises from the need to manage thousands of individual monsters
-                                                     and normal human characters concurrently. To achieve this, I've been hard at work optimizing the game
-                                                      and implementing parallel processing and group behaviors...
-                                                    <br><a href = "generic.html" >Learn more.</a>
-                                                </p></div>
-										</article>
-										<article>
-											<a  class="image"><img src="images/pic (9).png" alt="" /></a>
-											<div class="inner">
-												<h4>Hypercasual</h4>
-												<p>This is where the studio started. Our members although very enthusiasm, don't know what to do or start. 
-                                                    I often had to directly mentor, gave detail intructions. So hypercasual are the genre that we worked in this phase.
-                                                    In this genre, we embarked on the creation of several games, a total of six. 
-                                                    While some of these games proved to be successful, generating profit and contributing to our growth, 
-                                                    others did not perform as expected. Nevertheless, witnessing our projects generate revenue served 
-                                                    as a powerful motivator for the team, igniting a collective desire to tackle even more ambitious endeavors in the future...
-                                                
-                                                    <br><a href = "generic.html" >Learn more.</a>
-                                                </p>
-											</div>
-										</article>
-									</div>
-                                    
-								</div>
-							</section>
-
-						<!-- Four -->
-							<section id="four">
-								<div class="container">
-									<h3>Contact Me</h3>
-									<p>Links to my github, gitlab or linkedin account are on the right bar.
-                                        <br>Feel free to get in touch with me anytime! If you have any questions, suggestions, or just want to say hello, don't hesitate to reach out.  </p>
-                                   
-									<p>Email: vnhoanganh194@gmail.com</p>
-								</div>
-							</section>
-                            
+						
 						<!-- Five -->
 						<!--
 							<section id="five">
