@@ -122,6 +122,7 @@
 											In our game, the relentless hordes of monsters tend to arrive in large groups, requiring a well-thought-out strategy for optimizing. 
 											I've adopted a "divide and conquer" approach, where I segregate the monsters into distinct groups. 
 											Each group is led by a designated leader responsible for conducting collider casts or raycasts to assess group conditions.
+											The group will perform AI tree decision and movement calculation for all monsters in that group.
 											The results of these calculations are synchronized and enforced after a 2-frame delay. 
 											This strategy minimizes the computational burden on the main thread, allowing it to primarily focus on dispatching messages 
 											to the monsters for animation changes. 
