@@ -55,122 +55,131 @@
 										<h2>YT Studio</h2>
 									</header>
 										<h5>It is ticking</h5>
-										<p> kyChamp and Atlantis Invaders stand as the studio's flagship projects, boasting significant achievements. 
-											These games have cultivated a robust presence on Facebook, amassing over 5,000 loyal followers and inspiring numerous fan pages 
-											created by passionate players. 
-											Furthermore, they have earned recognition as a top-tier game studio, 
-											thanks to multiple features from Google and acknowledgment by TechInAsia.com. 
-											In 2020, our games proudly maintained a user base exceeding 10 million and received a multitude of prestigious awards.
-											</p>
-
-										<h5>SkyChamp</h5>
-										<p>	<span class="image left"><img src="images/pic (0).png" alt="" /></span>
+										<p>	<span class="image left"><img src="images/ticking.png" alt="" /></span>
 											<span class="right">
-											My story with SkyChamp began when I came to Spirit Bomb Studio. I began my journey in Spirit Bomb by participating the team behind it. My responsibility was to take required features from 
-											game designer and implement it. This required me to understand the code base of games and study the new coding style of the company. 
+												The newly released game in Steam. The game is about interacting with components to defuse the bomb. 
+												It also features a workshop so that user can freely create their own bomb and upload it so that everyone can play. 
+												Developing this game was a formidable challenge. 
+												The intricate game mechanics demanded meticulous handling of race conditions, time complexity so that even player make a complicated bomb,
+												the game logic still runs correctly and smoothly. <br>
+												But still, this challenge made me feel excited and began to make this game come true. I started off by figuring out what to
+												do with the workshop editor. Given that the game's premise involves allowing players to create their own unique bombs,
+												it was imperative that the editor be accessible and intuitive,
+												even for a child. Drawing inspiration from Oxygen Not Included, I crafted a 2D tile editor complete with input and 
+												output port mechanisms. <br>
+												Within the engine component, the wire system employs multi-threading in conjunction with a Breadth-First Search (BFS) algorithm 
+												to efficiently navigate and update the wire map whenever changes occur.
+
+												To guarantee the game's smooth functionality, even in scenarios where users create looped motherboards 
+												or encounter race conditions, I introduced a trace-back system. 
+												This feature acts as a fail-safe, ensuring that the game can continue to operate without disruptions, 
+												even when users push the boundaries of its mechanics. 
+												Besides that, I also did: 
 											<div class="col-4 col-12-xsmall">
-												<h5>Here are the list of features that I did during the first period:</h5>
 												<ol>
-													<li>Gacha pets.</li>
-													<li>Reroll pets skills.</li>
-													<li>Item fusion.</li>
-													<li>AFK Farm.</li>
-													<li>Fixing bugs (of course).</li>
-													<li>UI implementation and fix UI layout</li>
+													<li>Design and implement UI</li>
+													<li>VFX and SFX effects.</li>
+													<li>Design bomb.</li>
 												</ol>
 											</div>
+											This game presented the exact challenge I was seeking. Completing it not only bolstered my self-confidence 
+											but also served as a catalyst, inspiring me to delve into the creation of even more intricate and complex mechanic-driven games.
+
 										
-											<div class="col-4 col-12-xsmall">
-												<h5>After that, I was given the task to implement more technique stuffs such as:</h5>
-												<ol>
-													<li>Optimize first loading time remove not-used-yet assets and then load them later</li>
-														<p>The Unity splash screen takes approximately 2 seconds, followed by our loading screen for 3 seconds, 
-															which was deemed excessive for a mobile game.
-															My objective was to streamline the entire system's loading time. 
-															Consequently, I opted to minimize the initial loading task, 
-															retaining only essential components and relegating low-priority items to subsequent loading stages. 
-															This approach proved successful, reducing our loading time to just 1 second, all while maintaining a 
-															seamless user experience.
-														</p>
-													<li>Optimize frame rate by change new bullets to use particle system (ultilize particle system multi-thread)</li>
-													<p>In the game, bullets often move independently, and to optimize this, we can offload this task to another thread for updates. 
-														Unity's particle system is an ideal solution for this scenario. It allows us to track particle positions and provides APIs 
-														to control their lifespan and destroy particles as needed.<br>
-
-														The strategy involves creating a list in C# to store instances of a "fake bullet" class, 
-														and then performing 2D casting at regular intervals. This approach significantly enhances game performance,
-														 especially since the game features a substantial number of bullets being fired by the characters.<br>
-														<h5>The problems:</h5>
-														 <ol>
-															<li>Can not use for special bullet (chasing, follow bezier path,...)</li>
-															<li>Less flexibility: Can not freely control bullet sprite or speed. We have to follow the particle system restrictions</li>
-															<li>Today, we can have Unity job system that may work better for this case.</li>
-														</ol>
-													</p>
-													<li>Campain script system</li>
-													<p>The editor and gameplay implementation so that game designer can easily create a campain map where monster have to move 
-														in the particular shape or control ship of the user and move it to somewhere after playing a dialog.</p>
-													<li>There are more but I forgot them.</li>
-												</ol>
-											</div>
-											
-
-												
+											<section>
+												<span class="image fit"><img src="images/explosion.png" alt="" /></span>
+												<div class="box alt">
+													<div class="row gtr-50 gtr-uniform">
+														<div class="col-4"><span class="image fit"><img src="images/userbomb1.png" alt="" /></span></div>
+														<div class="col-4"><span class="image fit"><img src="images/userbomb2.png" alt="" /></span></div>
+														<div class="col-4"><span class="image fit"><img src="images/workshop.png" alt="" /></span></div>
+													</div>
+												</div>
+											</section>
 										</p>
-										<p><span class="image right"><img src="images/pic (5).png" alt="" /></span>
-											When my boss approached me and shared the exciting news that I would be a key member of the development team for the 
-											revolutionary next iterations of "SkyChamp", I couldn't contain my joy. 
-											It was a moment of immense pride and responsibility, knowing that my team and I had the opportunity 
-											to shape the future of that beloved game.
-											However, there was also a tinge of apprehension. "SkyChamp" had already garnered fame 
-											and a dedicated fan base. We were well aware that introducing new features and changes carried a certain level of risk.
-											We didn't want to disrupt the essence of what made these games great in the first place.
-											But with "Atlantis Invader," we found a unique opportunity. 
-											This game became the canvas where we could freely unleash our creativity and implement all the exciting ideas 
-											we had envisioned for the original "SkyChamp." It was a space to experiment, innovate, and enhance the gaming experience
-											while preserving the integrity of the established "Atlantis Invader" universe.<br>
+
+										<h5>The last barrier</h5>
+										<p><span class="image right"><img src="images/Barrier.png" alt="" /></span>
+											Following the successful completion of "It is Ticking," our team wasted no time and embarked on a new game project, 
+											aptly titled "The Last Barrier." This game unfolds in a post-apocalyptic world marred by a rampant zombification epidemic, 
+											where humanity has been brought to its knees by a mysterious disease that transforms individuals into monstrous creatures. 
+											However, hope persists as humans are now engaged in a relentless battle for survival. They discovered of the vaccine which
+											allowed them to resist the virus, and now they're determined to mount a counteroffensive against the infected hordes 
+											and reclaim their world. 
+											Following the main character, our hero, alongside his loyal comrades, will confront numerous perilous threats. Enhance their arsenal, bolster their team's capabilities, 
+											and become the vanguard of humanity's resurgence on this arduous journey. The game will soon released in GooglePlay Store and IOS store.
 											<br>
-											<p>
-											Initially, we embarked on a thorough exploration of the game's theme. 
-											Questions like, "What narrative are we aiming to convey?" and "What drives players to embark on this virtual adventure?"
-											occupied our discussions for an extensive period, spanning perhaps an entire week. 
-											Ultimately, our brainstorming efforts crystallized into a compelling storyline set in a post-apocalyptic world.
-											Here, the treasures of the old world lay submerged in the depths of the ocean, zealously guarded by ancient AI-controlled ships. 
-											In this narrative, the player assumes the role of a destitute mercenary, 
-											leading a motley crew on a quest to amass wealth by delving into the lost treasures of Atlantis 
-											and uncovering the mysteries that shroud our world's history.
-											</p>
-											<p>
-											During the development phase, we leveraged the existing engine from SkyChamp. 
-											I dedicated my efforts to refining and refactoring the codebase, which we then employed for Atlantis Invaders. 
-											My tasks included optimizing the code, reworking the monster path controller system, 
-											addressing lingering bugs, and, ultimately, restructuring large classes to establish a comprehensive code hierarchy. 
-											With these improvements in place, we were well-prepared to create a distinct iteration of Atlantis Invaders, 
-											setting it apart from SkyChamp.
-											</p>
-											<p>
-											I brought the game designer's vision to life by introducing new ships, bullets, and innovative mechanics for both motherships 
-											and smaller vessels. Additionally, I implemented a drone system and devised fresh leveling-up mechanisms. 
-											These enhancements transformed the game into a truly fantastic and visually stunning experience.
 											
+								
+											Developing a game with thousands of monsters is no small feat, especially when optimizing it to run smoothly on mobile devices. 
+											Fortunately, Unity now offers support for the "Entity-Component System" (ECS) along with the Job System and Burst Compiler. 
+											These tools are invaluable for optimizing game memory layout, ensuring the safety of multi-threading within the game system, 
+											and significantly improving cache hit rates. Additionally, Unity's built-in culling system effectively halts the updating
+											 of animations when the renderer is distant from the camera. All of these features combined contribute to our game's performance,
+											  making it not only feasible but also enjoyable to run on mid-level phones such as the Samsung A-3x.
+											<br><br>
 											
-											Indeed, it was a wonderful game. I fondly recall the stubborn ship AI, always eager to guide players on how to play, 
-											and the smug shopkeeper character who never failed to remind players that buying from him was the only logical choice. 
+											In our game, the relentless hordes of monsters tend to arrive in large groups, requiring a well-thought-out strategy for optimizing. 
+											I've adopted a "divide and conquer" approach, where I segregate the monsters into distinct groups. 
+											Each group is led by a designated leader responsible for conducting collider casts or raycasts to assess group conditions.
+											The results of these calculations are synchronized and enforced after a 2-frame delay. 
+											This strategy minimizes the computational burden on the main thread, allowing it to primarily focus on dispatching messages 
+											to the monsters for animation changes. 
+											<br>
+											* The "divide and conquer" approach also proves advantageous in avoiding the overhead associated with resizing, 
+											inserting, or deleting elements from list in C# (vector in C++). 
+											This is particularly crucial because groups closest to the main character are more likely to experience changes their members
+											. By managing monsters in separate groups, we minimize the need for frequent modifications 
+											to lists, resulting in more efficient memory management and improved overall performance.
+
+											<br><br>
+											Furthermore, considering that numerous monsters may have multiple attacks,
+											 the simultaneous execution of all these attacks in the traditional approach would lead to a substantial number of updates
+											  that need to be processed. To address this challenge, I've adopted a strategy reminiscent of Age of Empires 2.
+
+											In this strategy, I've separated the attack data from the animation process. 
+											The attack data frames are executed on a separate thread, which allows for more efficient handling of multiple attacks
+											 occurring simultaneously. When necessary, collider casting is dispatched to accurately detect targets for these attacks. 
+											 This approach optimizes the game's performance and ensures that combat remains smooth and responsive even when dealing with 
+											 a large number of attacking monsters. 
+											<br><br>
+											
+											By separating the attack data from the animation process, we've eliminated the need for animation events to spawn projectiles 
+											or perform time-based box casting for melee attacks. As a result, animations are primarily used for visualization purposes.
+											 Leveraging animation culling techniques, we ensure that renderers outside of the camera frustum 
+											 (the box used by the camera in the rendering pipeline) do not run. This intelligent optimization conserves valuable computing power,
+											  contributing to the game's overall performance efficiency.
+
+											<br><br>
+											For now, the game is almost completed, I was so happy to see the game run smoothly in my tested device. Hope to see the game
+											in the marketplace soon.
 											</p>
-										</p>
+											
 								
                                     </p>
-									<p>In August 2022, I departed from Spirit Bomb to pursue a Master's degree in Finland. 
-                                        My colleagues and boss bid me farewell, expressing their best wishes. 
-										This is the end of my journey with SkyChamp and especially Atlantis Invaders, thank you for all the memory that you gave me. 
-										I hope to see you rise in the Google Play ranking again.
+									<h5>Hyper casual games</h5>
+									<p>
+										This is where our studio's journey began. While our team was brimming with enthusiasm, we initially faced the challenge of not knowing
+										 where to begin. I often found myself in the role of a direct mentor, providing detailed instructions and guidance. It was during this 
+										 phase that we decided to venture into the hypercasual genre.
+
+										In this genre, we embarked on the creation of several games, a total of six. While some of these games proved to be successful, 
+										generating profit and contributing to our growth, others did not perform as expected. Nevertheless, witnessing our projects generate
+										 revenue served as a powerful motivator for the team, igniting a collective desire to tackle even more ambitious endeavors in the future.
+
+										This phase marked the foundation of our studio's experience and paved the way for the pursuit of larger,
+										 more impactful projects. 
+										 <section>
+											<span class="image fit"><img src="images/pic (9).png" alt="" /></span>
+											
+										</section>
 									</p>
 									
                                 </div>
 							</section>
 
 							
-							<section>
+							<!-- <section>
 								<span class="image fit"><img src="images/quan.png" alt="" /></span>
 								<div class="box alt">
 									<div class="row gtr-50 gtr-uniform">
@@ -183,7 +192,7 @@
 										<div class="col-4"><span class="image fit"><img src="images/skychamp.png" alt="" /></span></div>
 									</div>
 								</div>
-							</section>
+							</section> -->
 						
 						<!-- Five -->
 						<!--
