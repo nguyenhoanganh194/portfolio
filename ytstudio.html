@@ -139,16 +139,16 @@
 											  that need to be processed. To address this challenge, I've adopted a strategy reminiscent of Age of Empires 2.
 
 											In this strategy, I've separated the attack data from the animation process. 
-											The attack data frames are executed on a separate thread, which allows for more efficient handling of multiple attacks
+											The attack frames data are executed on a separate thread, which allows for more efficient handling of multiple attacks
 											 occurring simultaneously. When necessary, collider casting is dispatched to accurately detect targets for these attacks. 
 											 This approach optimizes the game's performance and ensures that combat remains smooth and responsive even when dealing with 
 											 a large number of attacking monsters. 
 											<br><br>
 											
-											By separating the attack data from the animation process, we've eliminated the need for animation events to spawn projectiles 
+											By separating the attack data from the animation process, I've eliminated the need for animation events to spawn projectiles 
 											or perform time-based box casting for melee attacks. As a result, animations are primarily used for visualization purposes.
-											 Leveraging animation culling techniques, we ensure that renderers outside of the camera frustum 
-											 (the box used by the camera in the rendering pipeline) do not run. This intelligent optimization conserves valuable computing power,
+											 Leveraging animation culling techniques, I ensure that animations outside of the camera frustum 
+											 (the box used by the camera in the rendering pipeline) do not run. This optimization conserves valuable computing power,
 											  contributing to the game's overall performance efficiency.
 
 											<br><br>
